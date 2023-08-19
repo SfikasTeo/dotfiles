@@ -1,0 +1,11 @@
+[global]
+foreground = "#CDD6F4"
+background = "#1E1E2E"
+
+frame_width = 0
+corner_radius = 8
+gap_size = 8
+padding = 16
+
+scale = 1.4
+font = "FiraCode Nerd Font Mono 10"
