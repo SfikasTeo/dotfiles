@@ -7,7 +7,7 @@
 # --bg-center FILE
 # --bg-max FILE
 # --bg-fill FILE
-feh --bg-fill --no-fehbg ~/Pictures/Wallpapers/goth.png ~/Pictures/Wallpapers/goth.png 
+feh --bg-fill --no-fehbg ~/Pictures/Wallpapers/goth.png ~/Pictures/Wallpapers/netrunner.png 
 
 # Set up the compositor. Picom configuration can either be specified by:
 # pciom --config /path/to/config else ~/.config/picom/picom.conf is used.
@@ -28,5 +28,14 @@ dunst &
 # Turn on Numlock on startup
 numlockx on &
 
-# Start the legacy gnome polkit agent
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+# Change default cursor
+xsetroot -cursor_name left_ptr
+
+# In case of multiple keyboard layouts:
+setxkbmap -layout us,gr -option win_space_toggle
+
+# Load Xresources
+xrdb -merge ~/.Xresources
+
+
+# Consider adding a polkit.

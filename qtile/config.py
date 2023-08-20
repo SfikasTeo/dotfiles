@@ -66,7 +66,6 @@ keys = [
     Key(["control"], "l", lazy.layout.right(), desc="Move focus to right"),
     Key(["control"], "j", lazy.layout.down(), desc="Move focus down"),
     Key(["control"], "k", lazy.layout.up(), desc="Move focus up"),
-    Key(["control"], "f", lazy.layout.next(), desc="Alter focused Window"),
     
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
@@ -145,6 +144,10 @@ keys.extend([
 
 # Application specific keybindings
 keys.extend([
+
+    Key([mod, "shift"], "s",
+        lazy.spawn(os.path.expanduser("~/.config/qtile/scripts/screen_area_clip.sh")),
+        desc="Save screenshot to clipboard"),
 
     Key([mod], "t", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "e", lazy.spawn(file_manager), desc="Launch file manager"),
