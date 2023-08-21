@@ -1,7 +1,7 @@
 #  Dotfiles <img src="https://github.com/SfikasTeo/.dotfiles/blob/main/gear.png" width="40" align="left" alt="White_Cog">
 
 #### Hello there!
-These are my developing dotfiles. This is a work in progress and many commits are expected.
+These are my developing dotfiles. This is a work in progress and many things might change with time.
 My goal is to </b>gather/alter/create</b> configuration files for a simple but elegant exprience.
 The dotfiles are aimed to X11 systems, but many components would also work with Wayland.  
 
