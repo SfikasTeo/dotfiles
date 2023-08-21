@@ -10,8 +10,8 @@ tutorials and documentation on some basic utilities for my convenience.
 
 ##### Main Utilities:
 <details>
+    <summary> Components: <i>(Arch package names)</i> </summary>
     <ul>
-        <summary> Components: <i>(Arch package names)</i> </summary>
         <li> Window Managers: <b>qtile</b> is my basic focus, Trials for bspwm & sxhkd are also present. </li>
         <li> Compositor: For systems on X11, where compositor is needed, <b>picom</b> does the job. </li>
         <li> Shell: <b>zsh & omyzsh</b>. </li> 
