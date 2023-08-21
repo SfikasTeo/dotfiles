@@ -59,7 +59,7 @@ nord = {
     'dark-magenta': '#b48ead',
     'magenta':      '#b48ead',
     'dark-cyan':    '#88c0d0',
-    'cyan':         '#88c0d0',
+    'cyan':         '#88fbcb',
     'dark-gray':    '#3b4252',
     'gray':         '#434c5e',
     'black':        '#232732',

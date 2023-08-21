@@ -1,6 +1,6 @@
 [global]
-foreground = "#CDD6F4"
-background = "#1E1E2E"
+foreground = "#e5e9f0"
+background = "#232732"
 
 frame_width = 0
 corner_radius = 8

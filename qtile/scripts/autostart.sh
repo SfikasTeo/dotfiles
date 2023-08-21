@@ -7,7 +7,7 @@
 # --bg-center FILE
 # --bg-max FILE
 # --bg-fill FILE
-feh --bg-fill --no-fehbg ~/Pictures/Wallpapers/goth.png ~/Pictures/Wallpapers/netrunner.png 
+feh --bg-fill --no-fehbg ~/Pictures/Wallpapers/tram.png ~/Pictures/Wallpapers/netrunner.png &
 
 # Set up the compositor. Picom configuration can either be specified by:
 # pciom --config /path/to/config else ~/.config/picom/picom.conf is used.
@@ -29,13 +29,15 @@ dunst &
 numlockx on &
 
 # Change default cursor
-xsetroot -cursor_name left_ptr
-
-# In case of multiple keyboard layouts:
-setxkbmap -layout us,gr -option win_space_toggle
+xsetroot -cursor_name left_ptr &
 
 # Load Xresources
-xrdb -merge ~/.Xresources
+xrdb -merge ~/.Xresources &
 
+# Add polkit agent
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
-# Consider adding a polkit.
+# Change keyboard layouts
+# setxkbmap -layout us,gr -option 'grp:lalt_lshift_toggle' & 
+# Can also easily be configured through qtile with the
+# KeyboardLayout widget, that also uses setxkbmap.

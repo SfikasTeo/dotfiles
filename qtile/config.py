@@ -37,7 +37,7 @@ from libqtile.config import (
     )
 
 from libqtile.lazy import lazy
-from themes import catppuccin as theme
+from themes import nord as theme
 from bars import bar1 as bar
 
 # Configure default applications
@@ -86,6 +86,8 @@ keys = [
         desc="Toggle between split and unsplit sides of stack"),
 
     # System Controls
+    Key([mod], "space", lazy.widget["keyboardlayout"].next_keyboard(),
+        desc="Next keyboard layout."),
     Key([mod], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "c", lazy.shutdown(), desc="Shutdown Qtile"),
@@ -258,8 +260,8 @@ mouse = [
 # First item in this list is the default.
 layouts = [
     MonadTall(
-        border_normal=theme['black'],
-        border_focus=theme['cyan'],
+        border_normal=theme['bg'],
+        border_focus=theme['blue'],
         margin=10,
         border_width=2,
         single_border_width=2,
@@ -270,7 +272,7 @@ layouts = [
 
 floating_layout = Floating(
     border_normal=theme['bg'],
-    border_focus=theme['cyan'],
+    border_focus=theme['blue'],
     border_width=2,
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
@@ -364,6 +366,7 @@ wmname = "LG3D"
 
 @hook.subscribe.startup_once
 def autostart():
+    bar.window.window.set_property("QTILE_BAR", 1, "CARDINAL", 32)
     home = os.path.expanduser("~/.config/qtile/scripts/autostart.sh")
     subprocess.run([home])
 
