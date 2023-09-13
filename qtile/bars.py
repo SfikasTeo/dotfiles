@@ -45,13 +45,6 @@ bar1 = Bar([
     right_half_circle(theme['bg']),
     Spacer(length=400),
     
-    Prompt(
-        foreground=theme['fg'],
-        bell_style=None,
-        cursor=False,
-    ),
-    Spacer(length=10),
-
     Systray(
         padding=15,
         background='#00000000'

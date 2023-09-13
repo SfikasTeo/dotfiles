@@ -5,8 +5,8 @@ These are my developing dotfiles. This is a work in progress and many things mig
 My goal is to </b>gather/alter/create</b> configuration files for a simple but elegant exprience.
 The dotfiles are aimed to X11 systems, but many components would also work with Wayland.  
 
-Even though this repository might not be the perfect place, i will also include some small 
-tutorials and documentation on some basic utilities for my convenience.
+For my convenience, in this repository also included are some small tutorials on basic utilities and some personal customization files.
+( Even if this in the best place for these... )
 
 ##### Main Utilities:
 <details>
@@ -30,6 +30,6 @@ tutorials and documentation on some basic utilities for my convenience.
         <li> Theming: <b>lxappearance-gtk3</b> will automate most of the work. </li>
         <li> Other utilities: <i>git, openssh, gparted, dosfstools, ntfs-3g, fuse3, fuse2, fuse-common, man-pages,
              tldr, networkmanager, wpa_supplicant</i>. </li>
-        <li> To be added: <b>rofi</b>. </li>
+        <li> Application Launcher & Session Management: <b>rofi</b>. </li>
     </ul>
 </details>

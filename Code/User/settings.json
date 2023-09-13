@@ -1,0 +1,36 @@
+{
+    "editor.inlineSuggest.enabled": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "'FiraCode Nerd Font Mono', 'monospace', monospace",
+    "editor.wordWrap": "on",
+    "editor.fontSize": 15,
+    "editor.tabSize": 2,
+    "files.autoSave": "afterDelay",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.profiles.linux": {
+        "zsh (login)": {
+            "path": "zsh",
+            "args": ["-l"]
+        }
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false
+    },
+    "vim.useSystemClipboard": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "update.showReleaseNotes": false,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "git.openRepositoryInParentFolders": "always",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "workbench.colorTheme": "Astro Dark"
+}

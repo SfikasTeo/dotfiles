@@ -1,0 +1,54 @@
+/* Rofi Nord Color scheme */
+
+* {
+    highlight: bold italic;
+    scrollbar: true;
+
+    fg:           #e5e9f0;
+    bg:           #111820;
+    bg0:          #232732;
+    dark-red:     #bf616a;
+    red:          #bf616a;
+    dark-green:   #a3be8c;
+    green:        #a3be8c;
+    dark-yellow:  #ebcb8b;
+    yellow:       #ebcb8b;
+    dark-blue:    #5e81ac;
+    blue:         #81a1c1;
+    dark-magenta: #b48ead;
+    magenta:      #b48ead;
+    dark-cyan:    #88c0d0;
+    cyan:         #88fbcb;
+    dark-gray:    #3b4252;
+    gray:         #434c5e;
+    black:        #232732;
+
+    /* Theme colors */
+    background:                  @bg;
+    background-color:            @background;
+    foreground:                  @fg;
+    border-color:                @blue;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @border-color;
+
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @bg0;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @dark-blue;
+    selected-normal-foreground:  @background;
+
+    active-background:           @dark-cyan;
+    active-foreground:           @background;
+    alternate-active-background: @active-background;
+    alternate-active-foreground: @active-foreground;
+    selected-active-background:  @cyan;
+    selected-active-foreground:  @active-foreground;
+
+    urgent-background:           @red;
+    urgent-foreground:           @background;
+    alternate-urgent-background: @urgent-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    selected-urgent-background:  @red;
+    selected-urgent-foreground:  @urgent-foreground;
+}

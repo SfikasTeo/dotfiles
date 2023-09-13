@@ -43,7 +43,7 @@ from bars import bar1 as bar
 # Configure default applications
 mod = "mod4"  # Super Key
 terminal = "kitty"  # Default Terminal
-file_manager = "nemo"  # Default File Manager
+file_manager = "thunar"  # Default File Manager
 browser = "firefox"  # Default Browser
 
 # ╔╗╔═╗              ╔╗          ╔╗    
@@ -91,7 +91,6 @@ keys = [
     Key([mod], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "c", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key(["control"], "space", lazy.spawncmd(), desc="Command prompt widget"),
 ]
 
 # Layout specific keybindings
@@ -154,6 +153,10 @@ keys.extend([
     Key([mod], "t", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "e", lazy.spawn(file_manager), desc="Launch file manager"),
     Key([mod], "b", lazy.spawn(browser), desc="Launch browser"),
+    
+    Key(["control"], "space",
+        lazy.spawn(os.path.expanduser("~/.config/qtile/scripts/rofi-applauncher.sh")),
+        desc="Launch rofi dmenu"),
 ])
 
 
@@ -204,20 +207,14 @@ groups.append(
         [
             DropDown(
                 'terminal', 'kitty',
-                width=0.4, height=0.5,
-                x=0.3, y=0.1,
+                width=0.5, height=0.7,
+                x=0.25, y=0.1,
                 opacity=1
             ),
             DropDown(
                 'audio', 'pavucontrol',
                 width=0.4, height=0.6,
                 x=0.3, y=0.1,
-                opacity=1
-            ),
-           DropDown(
-                'bluetooth', 'blueman-manager',
-                width=0.05, height=0.6,
-                x=0.35, y=0.1,
                 opacity=1
             ),
         ]
@@ -227,7 +224,6 @@ groups.append(
 keys.extend([
     Key(["control"], "1", lazy.group['scratchpad'].dropdown_toggle('audio')),
     Key(["control"], "2", lazy.group['scratchpad'].dropdown_toggle('terminal')),
-    Key(["control"], "3", lazy.group['scratchpad'].dropdown_toggle('bluetooth')),
 ])                                               
 
 

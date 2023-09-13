@@ -16,11 +16,11 @@ picom &
 # System Tray (X11)
 
 # bluetooth
-blueman-applet &
+#blueman-applet &
 # Network Manager
 nm-applet &
 # Pulseaudio
-pasystray &
+#pasystray &
 
 # Notifications
 dunst &

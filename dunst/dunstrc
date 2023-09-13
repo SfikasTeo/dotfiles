@@ -1,6 +1,9 @@
 [global]
+
+# Colors: Nord
 foreground = "#e5e9f0"
-background = "#232732"
+background = "#111820"
+# background.original = "#232732"
 
 frame_width = 0
 corner_radius = 8

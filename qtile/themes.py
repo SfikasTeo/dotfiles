@@ -47,7 +47,8 @@ catppuccin = {
 
 nord = {
     'fg':           '#e5e9f0',
-    'bg':           '#232732',
+    'bg':           '#111820',
+    'bg.original':  '#232732',
     'dark-red':     '#bf616a',
     'red':          '#bf616a',
     'dark-green':   '#a3be8c',
