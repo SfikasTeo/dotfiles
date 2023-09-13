@@ -29,7 +29,7 @@ bar1 = Bar([
         max_chars=30,
     ),
 
-    Spacer(length=200),
+    Spacer(),
     left_half_circle(theme['bg']),
     GroupBox(
         background=theme['bg'],
@@ -43,7 +43,7 @@ bar1 = Bar([
         highlight_color=theme['bg'],
     ),
     right_half_circle(theme['bg']),
-    Spacer(length=400),
+    Spacer(),
     
     Systray(
         padding=15,
