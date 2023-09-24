@@ -1,67 +1,61 @@
-# ╔════╗╔╗                  
-# ║╔╗╔╗║║║                  
-# ╚╝║║╚╝║╚═╗╔══╗╔╗╔╗╔══╗╔══╗
-#   ║║  ║╔╗║║╔╗║║╚╝║║╔╗║║══╣
-#  ╔╝╚╗ ║║║║║║═╣║║║║║║═╣╠══║
-#  ╚══╝ ╚╝╚╝╚══╝╚╩╩╝╚══╝╚══╝
-
-gruvbox = {
-    'bg':           '#141617',
-    'fg':           '#e2cca9',
-    'dark-red':     '#bd4740',
-    'red':          '#f2594b',
-    'dark-green':   '#32362a',
-    'green':        '#b0b846',
-    'dark-yellow':  '#e9b143',
-    'yellow':       '#e9b143',
-    'dark-blue':    '#0d3138',
-    'blue':         '#80aa9e',
-    'dark-magenta': '#b16286',
-    'magenta':      '#d3869b',
-    'dark-cyan':    '#689d6a',
-    'cyan':         '#8bba7f',
-    'dark-gray':    '#282828',
-    'gray':         '#7c6f64',
-    'black':        '#141617',
-}
-
-catppuccin = {
-    'fg':           '#cdd5f4',
-    'bg':           '#12181f',
-    'dark-red':     '#f38ba8',
-    'red':          '#eba0ac',
-    'dark-green':   '#77dd77',
-    'green':        '#77dd77',
-    'dark-yellow':  '#f9e2af',
-    'yellow':       '#f9e2af',
-    'dark-blue':    '#89b4fa',
-    'blue':         '#74c7ec',
-    'dark-magenta': '#cba6f7',
-    'magenta':      '#cba6f7',
-    'dark-cyan':    '#43b3ae',
-    'cyan':         '#a4d8d8',
-    'dark-gray':    '#313244',
-    'gray':         '#45475a',
-    'black':        '#12181f',
-}
+#  _____ _                              
+# |_   _| |__   ___ _ __ ___   ___  ___ 
+#   | | | '_ \ / _ \ '_ ` _ \ / _ \/ __|
+#   | | | | | |  __/ | | | | |  __/\__ \
+#   |_| |_| |_|\___|_| |_| |_|\___||___/
 
 nord = {
-    'fg':           '#e5e9f0',
-    'bg':           '#111820',
-    'bg.original':  '#232732',
-    'dark-red':     '#bf616a',
-    'red':          '#bf616a',
-    'dark-green':   '#a3be8c',
-    'green':        '#a3be8c',
-    'dark-yellow':  '#ebcb8b',
-    'yellow':       '#ebcb8b',
-    'dark-blue':    '#5e81ac',
-    'blue':         '#81a1c1',
-    'dark-magenta': '#b48ead',
-    'magenta':      '#b48ead',
-    'dark-cyan':    '#88c0d0',
-    'cyan':         '#88fbcb',
-    'dark-gray':    '#3b4252',
-    'gray':         '#434c5e',
-    'black':        '#232732',
+    # Color
+    'red':            '#bf616a',
+    'bright-red':     '#bf616a',
+    'green':          '#a3be8c',
+    'bright-green':   '#a3be8c',
+    'yellow':         '#ebcb8b',
+    'bright-yellow':  '#ebcb8b',
+    'blue':           '#5e81ac',
+    'bright-blue':    '#81a1c1',
+    'magenta':        '#b48ead',
+    'bright-magenta': '#b48ead',
+    'cyan':           '#88c0d0',
+    'bright-cyan':    '#88fbcb',
+    'orange':         '#a16946',
+    'bright-orange':  '#dc9656',
+
+    # Monotone
+    'black':        '#111820',
+    'bright-black': '#2e3440',
+    'gray':         '#3b4252',
+    'bright-gray':  '#434c5e',
+    'light-gray':   '#d8dee9',
+    'gray-white':   '#e5e9f0',
+    'white':        '#eceff4',
+    'bright-white': '#f8f8f8',
+}
+
+base16_default_dark = {
+    # Color
+    'red':            '#ab4642',
+    'bright-red':     '#ab4642',
+    'green':          '#a1b56c',
+    'bright-green':   '#a1b56c',
+    'yellow':         '#f7ca88',
+    'bright-yellow':  '#f7ca88',
+    'blue':           '#7cafc2',
+    'bright-blue':    '#7cafc2',
+    'magenta':        '#ba8baf',
+    'bright-magenta': '#ba8baf',
+    'cyan':           '#86c1b9',
+    'bright-cyan':    '#86c1b9',
+    'orange':         '#a16946',
+    'bright-orange':  '#dc9656',
+
+    # Monotone
+    'black':        '#181818',
+    'bright-back':  '#282828',
+    'gray':         '#383838',
+    'bright-gray':  '#585858',
+    'light-gray':   '#b8b8b8',
+    'gray-white':   '#d8d8d8',
+    'white':        '#e8e8e8',
+    'bright-white': '#f8f8f8',
 }

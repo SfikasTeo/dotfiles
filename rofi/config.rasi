@@ -17,7 +17,7 @@ configuration {
 }
 
 /* import theme. */
-@import "~/.config/rofi/rofi-nord.rasi"
+@import "~/.config/rofi/base16-default-dark.rasi"
 
 /* Rofi Settings */
 
@@ -25,7 +25,6 @@ window {
     width:700px;
     background-color: @background;
     border:           0;
-    padding:          8;
 }
 
 mainbox {
@@ -34,27 +33,32 @@ mainbox {
 }
 
 message {
-    border:       2px 0 0;
+    border:       2px solid 0px 0px;
     border-color: @separatorcolor;
     padding:      1px;
 }
 
 textbox {
-    highlight:  @highlight;
     text-color: @foreground;
 }
 
 listview {
-    border:       2px solid 0 0;
-    padding:      2px 0 0;
-    border-color: @separatorcolor;
-    spacing:      2px;
-    scrollbar:    @scrollbar;
+    fixed-height:   0;
+    border:         2px solid 0px 0px;
+    border-color:   @separatorcolor;
+    spacing:        2px;
+    scrollbar:      true;
+    padding:        2px 0px 0px;
+}
+
+element-text, element-icon {
+    background-color:   inherit;
+    text-color:         inherit;
 }
 
 element {
     border:  0;
-    padding: 2px;
+    padding: 6px;
 }
 
 element.normal.normal {
@@ -105,39 +109,52 @@ element.alternate.active {
 scrollbar {
     width:        4px;
     border:       0;
-    handle-color: @scrollbar-handle;
+    handle-color: @normal-foreground;
     handle-width: 8px;
     padding:      0;
 }
 
 sidebar {
-    border:       2px 0 0;
+    border:       2px solid 0px 0px;
     border-color: @separatorcolor;
 }
 
-inputbar {
-    spacing:    0;
-    text-color: @normal-foreground;
-    padding:    2px;
-    children:   [ prompt, textbox-prompt-sep, entry, case-indicator ];
-}
-
-case-indicator,
-entry,
-prompt,
 button {
-    spacing:    0;
-    text-color: @normal-foreground;
+    spacing:          0;
+    text-color:       @normal-foreground;
 }
 
-button.selected {
+button selected {
     background-color: @selected-normal-background;
     text-color:       @selected-normal-foreground;
 }
 
-textbox-prompt-sep {
-    expand:     false;
-    str:        ":";
-    text-color: @normal-foreground;
-    margin:     0 0.3em 0 0;
+inputbar {
+    spacing:          0px;
+    text-color:       @normal-foreground;
+    padding:          1px ;
+    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
+
+case-indicator {
+    spacing:          0;
+    text-color:       @normal-foreground;
+}
+
+entry {
+    spacing:          0;
+    text-color:       @normal-foreground;
+}
+
+prompt {
+    spacing:          0;
+    text-color:       @normal-foreground;
+}
+
+textbox-prompt-colon {
+    expand:           false;
+    str:              ":";
+    margin:           0px 0.3000em 0.0000em 0.0000em ;
+    text-color:       inherit;
+}
+

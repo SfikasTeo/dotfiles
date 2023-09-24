@@ -12,37 +12,38 @@ from libqtile.widget.spacer import Spacer
 from libqtile.widget.prompt import Prompt
 from libqtile.widget.keyboardlayout import KeyboardLayout
 from unicodes import left_half_circle, right_half_circle
-from themes import nord as theme
+
+from themes import base16_default_dark as theme
 
 # All the unicode symbols are from Nerd Fonts
 bar1 = Bar([
-    left_half_circle(theme['dark-blue']),
+    left_half_circle(theme['black']),
     Clock(
-        background=theme['dark-blue'],
-        foreground=theme['fg'],
+        background=theme['black'],
+        foreground=theme['white'],
         format='%Y-%m-%d %a %I:%M %p'),
-    right_half_circle(theme['dark-blue']),
+    right_half_circle(theme['black']),
     Spacer(length=10),
 
     WindowName(
-        foreground=theme['fg'],
+        foreground=theme['white'],
         max_chars=30,
     ),
 
     Spacer(),
-    left_half_circle(theme['bg']),
+    left_half_circle(theme['black']),
     GroupBox(
-        background=theme['bg'],
-        fontsize = 26,
+        background=theme['black'],
+        fontsize = 24,
         disable_drag=True,
-        active=theme['dark-blue'],
-        inactive=theme['dark-gray'],
+        highlight_color=theme['black'],
         highlight_method='line',
-        block_highlight_text_color=theme['dark-cyan'],
+        block_highlight_text_color=theme['cyan'],
+        active=theme['light-gray'],
+        inactive=theme['gray'],
         borderwidth=0,
-        highlight_color=theme['bg'],
     ),
-    right_half_circle(theme['bg']),
+    right_half_circle(theme['black']),
     Spacer(),
     
     Systray(
@@ -51,28 +52,28 @@ bar1 = Bar([
     ),
     Spacer(length=10),
 
-    left_half_circle(theme['blue']),
+    left_half_circle(theme['black']),
     CPU(
-        background=theme['blue'],
-        foreground=theme['fg'],
+        background=theme['black'],
+        foreground=theme['white'],
         format='{freq_current}GHz {load_percent}%'),
-    right_half_circle(theme['blue']),
+    right_half_circle(theme['black']),
     Spacer(length=10),
 
     left_half_circle(theme['black']),
     Memory(
         background=theme['black'],
-        foreground=theme['fg'],
+        foreground=theme['white'],
         format='{MemUsed: .0f}{mm}'),
     right_half_circle(theme['black']),
     Spacer(length=10),
 
-    left_half_circle(theme['dark-blue']),
+    left_half_circle(theme['black']),
     KeyboardLayout(
-        background=theme['dark-blue'],
-        foreground=theme['fg'],
+        background=theme['black'],
+        foreground=theme['white'],
         configured_keyboards=['us','gr']), 
-    right_half_circle(theme['dark-blue']),
+    right_half_circle(theme['black']),
     Spacer(length=10),
 ],
     margin=[10, 10, 5, 10],

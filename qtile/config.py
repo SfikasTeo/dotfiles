@@ -43,8 +43,8 @@ from bars import bar1 as bar
 # Configure default applications
 mod = "mod4"  # Super Key
 terminal = "kitty"  # Default Terminal
-file_manager = "thunar"  # Default File Manager
-browser = "firefox"  # Default Browser
+file_manager = "nemo"  # Default File Manager
+browser = "brave"  # Default Browser
 
 # ╔╗╔═╗              ╔╗          ╔╗    
 # ║║║╔╝              ║║          ║║    
@@ -256,8 +256,8 @@ mouse = [
 # First item in this list is the default.
 layouts = [
     MonadTall(
-        border_normal=theme['bg'],
-        border_focus=theme['blue'],
+        border_normal=theme['black'],
+        border_focus=theme['cyan'],
         margin=10,
         border_width=2,
         single_border_width=2,
@@ -267,8 +267,8 @@ layouts = [
 ]
 
 floating_layout = Floating(
-    border_normal=theme['bg'],
-    border_focus=theme['blue'],
+    border_normal=theme['black'],
+    border_focus=theme['cyan'],
     border_width=2,
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
@@ -297,7 +297,7 @@ floating_layout = Floating(
 
 widget_defaults = dict(
     font="FiraCode Nerd Font Mono",
-    fontsize=14,
+    fontsize=13,
     padding=10,
 )
 extension_defaults = widget_defaults.copy()
