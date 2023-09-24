@@ -30,6 +30,10 @@ nord = {
     'gray-white':   '#e5e9f0',
     'white':        '#eceff4',
     'bright-white': '#f8f8f8',
+
+    # System
+    'bg': '#111820'
+    'fg': '#eceff4'
 }
 
 base16_default_dark = {
@@ -58,4 +62,41 @@ base16_default_dark = {
     'gray-white':   '#d8d8d8',
     'white':        '#e8e8e8',
     'bright-white': '#f8f8f8',
+
+     # System
+    'bg': '#111820'
+    'fg': '#d8d8d8'
 }
+
+catppuccin = {
+    # Color
+    'red':            '#f38ba8',
+    'bright-red':     '#eba0ac',
+    'green':          '#a6e3a1',
+    'bright-green':   '#94e2d5',
+    'yellow':         '#f9e2af',
+    'bright-yellow':  '#f9e2af',
+    'blue':           '#89b4Fa',
+    'bright-blue':    '#74c7ec',
+    'magenta':        '#cba6f7',
+    'bright-magenta': '#b4befe',
+    'cyan':           '#89dceb',
+    'bright-cyan':    '#94e2d5',
+    'orange':         '#fab387',
+    'bright-orange':  '#fab387',
+
+    # Monotone
+    'black':        '#11111b',
+    'bright-black': '#181825',
+    'gray':         '#313244',
+    'bright-gray':  '#585b70',
+    'light-gray':   '#6c7086',
+    'gray-white':   '#a6adc8',
+    'white':        '#cdd6f4',
+    'bright-white': '#f8f8f8',
+
+     # System
+    'bg': '#181825'
+    'fg': '#cdd6f4'
+}
+

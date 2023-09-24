@@ -17,33 +17,33 @@ from themes import base16_default_dark as theme
 
 # All the unicode symbols are from Nerd Fonts
 bar1 = Bar([
-    left_half_circle(theme['black']),
+    left_half_circle(theme['bg']),
     Clock(
-        background=theme['black'],
-        foreground=theme['white'],
+        background=theme['bg'],
+        foreground=theme['fg'],
         format='%Y-%m-%d %a %I:%M %p'),
-    right_half_circle(theme['black']),
+    right_half_circle(theme['bg']),
     Spacer(length=10),
 
     WindowName(
-        foreground=theme['white'],
+        foreground=theme['fg'],
         max_chars=30,
     ),
 
     Spacer(),
-    left_half_circle(theme['black']),
+    left_half_circle(theme['bg']),
     GroupBox(
-        background=theme['black'],
+        background=theme['bg'],
         fontsize = 24,
         disable_drag=True,
-        highlight_color=theme['black'],
+        highlight_color=theme['bg'],
         highlight_method='line',
         block_highlight_text_color=theme['cyan'],
         active=theme['light-gray'],
         inactive=theme['gray'],
         borderwidth=0,
     ),
-    right_half_circle(theme['black']),
+    right_half_circle(theme['bg']),
     Spacer(),
     
     Systray(
@@ -52,28 +52,28 @@ bar1 = Bar([
     ),
     Spacer(length=10),
 
-    left_half_circle(theme['black']),
+    left_half_circle(theme['bg']),
     CPU(
-        background=theme['black'],
-        foreground=theme['white'],
+        background=theme['bg'],
+        foreground=theme['fg'],
         format='{freq_current}GHz {load_percent}%'),
-    right_half_circle(theme['black']),
+    right_half_circle(theme['bg']),
     Spacer(length=10),
 
-    left_half_circle(theme['black']),
+    left_half_circle(theme['bg']),
     Memory(
-        background=theme['black'],
-        foreground=theme['white'],
+        background=theme['bg'],
+        foreground=theme['fg'],
         format='{MemUsed: .0f}{mm}'),
-    right_half_circle(theme['black']),
+    right_half_circle(theme['bg']),
     Spacer(length=10),
 
-    left_half_circle(theme['black']),
+    left_half_circle(theme['bg']),
     KeyboardLayout(
-        background=theme['black'],
-        foreground=theme['white'],
+        background=theme['bg'],
+        foreground=theme['fg'],
         configured_keyboards=['us','gr']), 
-    right_half_circle(theme['black']),
+    right_half_circle(theme['bg']),
     Spacer(length=10),
 ],
     margin=[10, 10, 5, 10],
