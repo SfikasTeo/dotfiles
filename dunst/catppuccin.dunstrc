@@ -19,12 +19,12 @@ separator_color = "#f5e0dc"
 
 [low]
     msg_urgency = low
-    background = "#181825"
+    background = "#11111b"
     foreground = "#434c5e"
 
 [normal]
     msg_urgency = normal
-    background = "#181825"
+    background = "#11111b"
     foreground = "#f5e0dc
 
 [critical]

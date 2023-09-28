@@ -13,7 +13,7 @@ from libqtile.widget.prompt import Prompt
 from libqtile.widget.keyboardlayout import KeyboardLayout
 from unicodes import left_half_circle, right_half_circle
 
-from themes import base16_default_dark as theme
+from themes import nord as theme
 
 # All the unicode symbols are from Nerd Fonts
 bar1 = Bar([

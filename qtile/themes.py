@@ -32,7 +32,7 @@ nord = {
     'bright-white': '#f8f8f8',
 
     # System
-    'bg': '#111820'
+    'bg': '#111820',
     'fg': '#eceff4'
 }
 
@@ -64,7 +64,7 @@ base16_default_dark = {
     'bright-white': '#f8f8f8',
 
      # System
-    'bg': '#111820'
+    'bg': '#111820',
     'fg': '#d8d8d8'
 }
 
@@ -96,7 +96,7 @@ catppuccin = {
     'bright-white': '#f8f8f8',
 
      # System
-    'bg': '#181825'
+    'bg': '#11111b',
     'fg': '#cdd6f4'
 }
 

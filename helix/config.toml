@@ -1,0 +1,47 @@
+#   _   _      _ _      
+#  | | | | ___| (_)_  __
+#  | |_| |/ _ \ | \ \/ /
+#  |  _  |  __/ | |>  < 
+#  |_| |_|\___|_|_/_/\_\
+#
+
+theme = "onedark_nord"
+
+[editor]
+line-number = "relative"
+bufferline = "multiple"
+color-modes = true
+mouse = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control"]
+center = ["file-name","file-modification-indicator"]
+right = ["diagnostics", "file-encoding", "selections", "position"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.indent-guides]
+render = true
+
+#  _  __                                      
+# | |/ /___ _   _   _ __ ___   __ _ _ __  ___ 
+# | ' // _ \ | | | | '_ ` _ \ / _` | '_ \/ __|
+# | . \  __/ |_| | | | | | | | (_| | |_) \__ \
+# |_|\_\___|\__, | |_| |_| |_|\__,_| .__/|___/
+#           |___/                  |_|        
+
+[keys.normal]
+
+
+[keys.insert]
+j = { j = "normal_mode" } # Maps 'jj' to exit insert mode
