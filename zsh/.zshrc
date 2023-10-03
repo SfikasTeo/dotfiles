@@ -59,5 +59,5 @@ fi
 # For a full list of active aliases, run `alias`.
 
 alias lla="la"
-
+alias hx="helix"
 
