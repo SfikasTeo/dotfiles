@@ -1,6 +1,5 @@
 {
     "editor.inlineSuggest.enabled": true,
-    "workbench.iconTheme": "material-icon-theme",
     "editor.fontFamily": "'FiraCode Nerd Font Mono', 'monospace', monospace",
     "editor.wordWrap": "on",
     "editor.fontSize": 15,
@@ -19,18 +18,15 @@
         "markdown": true,
         "scminput": false
     },
-    "vim.useSystemClipboard": true,
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["j", "j"],
-            "after": ["<Esc>"]
-        }
-    ],
     "update.showReleaseNotes": false,
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "git.openRepositoryInParentFolders": "always",
     "[python]": {
         "editor.defaultFormatter": "ms-python.autopep8"
     },
-    "workbench.colorTheme": "Astro Dark"
+
+    "workbench.colorTheme": "One Monokai Darker",
+    "workbench.statusBar.visible": false,
+    "window.menuBarVisibility": "toggle",
+    "workbench.iconTheme": "material-icon-theme"
 }

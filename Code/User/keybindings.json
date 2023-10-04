@@ -81,4 +81,10 @@
       "snippet": "\t"
     }
   },
+  {
+  "key": "j j",
+  "command": "dance.modes.set.normal",
+  "when": "editorTextFocus && !editorReadonly && dance.mode != 'normal'"
+  },
+  
 ]
