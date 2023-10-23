@@ -43,7 +43,7 @@ from bars import bar1 as bar
 # Configure default applications
 mod = "mod4"  # Super Key
 terminal = "kitty"  # Default Terminal
-file_manager = "nemo"  # Default File Manager
+file_manager = "thunar"  # Default File Manager
 browser = "brave"  # Default Browser
 
 # ╔╗╔═╗              ╔╗          ╔╗    
