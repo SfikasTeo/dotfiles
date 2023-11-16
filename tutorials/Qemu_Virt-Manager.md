@@ -14,12 +14,24 @@ interacting with the graphical display of the virtualized guest OS.
 #### 1. Needed Packages:
 * Fedora: `dnf install @virtualization`
 * Debian: `apt-get install qemu virt-manager`
-* Arch: `pacman -S archlinux-keyring qemu virt-manager virt-viewer dnsmasq bridge-utils libguestfs`
-#### 2. Libvirt Group:
+* Arch:
+```
+pacman -S archlinux-keyring
+pacman -S qemu virt-manager virt-viewer vde2 dnsmasq bridge-utils libguestfs
+```
+#### 2. Enable Normal Users to Use KMV:
+```
+sudo vim /etc/libvirt/libvirtd.conf
+
+# Uncomment the lines 85 and 108
+unix_sock_group = "libvirt"
+unix_sock_rw_perms = "0770"
+```
+#### 3. Libvirt Group:
 Add wanted user to the libvirt groups, allow them to handle Virtual Machines.
 ```
-sudo useradd -g $USER libvirt
-sudo useradd -g $USER libvirt-kvm
+sudo usermod -a -G libvirt $(whoami)
+newgrp libvirt
 ```
 #### 3. Enable Service to establish Virtualization:
 ```
