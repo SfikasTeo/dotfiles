@@ -21,6 +21,9 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 
+[editor.lsp]
+display-inlay-hints = true
+
 [editor.statusline]
 left = ["mode", "spinner", "version-control"]
 center = ["file-name","file-modification-indicator"]

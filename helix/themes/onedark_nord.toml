@@ -50,7 +50,7 @@
 "error" = { fg = "red", modifiers = ["bold"] }
 
 "ui.background" = { bg = "black" }
-"ui.virtual" = { fg = "faint-gray" }
+"ui.virtual" = { fg = "light-gray" }
 "ui.virtual.indent-guide" = { fg = "faint-gray" }
 "ui.virtual.whitespace" = { fg = "light-gray" }
 "ui.virtual.ruler" = { bg = "gray" }
@@ -60,7 +60,7 @@
 "ui.cursor.primary" = { fg = "white", modifiers = ["reversed"] }
 "ui.cursor.match" = { fg = "blue", modifiers = ["underlined"]}
 
-"ui.selection" = { bg = "faint-gray" }
+"ui.selection" = { bg = "light-gray" }
 "ui.selection.primary" = { bg = "gray" }
 "ui.cursorline.primary" = { bg = "light-black" }
 
@@ -100,7 +100,8 @@ cyan = "#56B6C2"
 white = "#ABB2BF"
 black = "#111820"
 light-black = "#2C323C"
-gray = "#2e3440"
-faint-gray = "#3b4252"
-light-gray = "#434c5e"
+gray = "#363941"
+faint-gray = "#4c4f56"
+light-gray = "#62656b"
+pale-gray = "#8f9195"
 linenr = "#4B5263"
