@@ -1,4 +1,4 @@
-#  Dotfiles <img src="https://github.com/SfikasTeo/.dotfiles/blob/main/gear.png" width="40" align="left" alt="White_Cog">
+#  Dotfiles <img src="https://github.com/SfikasTeo/dotfiles/blob/main/assets/gear.png" width="40" align="left" alt="White_Cog">
 
 #### Hello there!
 These are my developing dotfiles. This is a work in progress and many things might change with time.

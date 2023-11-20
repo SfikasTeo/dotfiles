@@ -22,8 +22,9 @@ nord = {
     'bright-orange':  '#dc9656',
 
     # Monotone
-    'black':        '#111820',
-    'bright-black': '#2e3440',
+    'black':        '#090c10',
+    'bright-black': '#111820',
+    'pale-black':   '#2e3440',
     'gray':         '#3b4252',
     'bright-gray':  '#434c5e',
     'light-gray':   '#d8dee9',
@@ -32,11 +33,11 @@ nord = {
     'bright-white': '#f8f8f8',
 
     # System
-    'bg': '#111820',
+    'bg': '#090c10',
     'fg': '#eceff4'
 }
 
-base16_default_dark = {
+base16 = {
     # Color
     'red':            '#ab4642',
     'bright-red':     '#ab4642',

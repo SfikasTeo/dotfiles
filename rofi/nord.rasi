@@ -3,11 +3,13 @@
 * {
     red:                         #bf616a;
     blue:                        #81a1c1;
+    black:                       #090C10;
+    light-black:                 #111820;
     lightfg:                     #d8dee9;
     lightbg:                     #2e3440;
     foreground:                  #e5e9f0;
-    background:                  #111820;
-    background-color:            #111820;
+    background:                  #090C10;
+    background-color:            #090C10;
 
     separatorcolor:              @foreground;
     border-color:                @foreground;

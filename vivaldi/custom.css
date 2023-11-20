@@ -1,6 +1,0 @@
-/* Open vivaldi://experiments -> Allow CSS mods*/
-
-/* removed shadow from tab icons in dark themes */
-.theme-dark .favicon:not(.svg) {
-     filter: none !important;
-} 
