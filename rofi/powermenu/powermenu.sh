@@ -8,7 +8,7 @@
 
 home_dir="$HOME/.config/rofi/"
 dir="$HOME/.config/rofi/powermenu"
-config='config_compact'
+config='config_menu'
 
 # CMDs
 uptime="`uptime -p | sed -e 's/up //g'`"
