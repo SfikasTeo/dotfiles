@@ -64,8 +64,8 @@ run_cmd() {
 chosen="$(run_rofi)"
 case ${chosen} in
 		$lock)
-		#hyprctl dispatch exit
-		killall -u sfikas
+		hyprctl dispatch exit
+		# killall -u sfikas
 		    ;;
     $shutdown)
 		run_cmd --shutdown
