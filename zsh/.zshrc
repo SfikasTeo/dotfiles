@@ -1,5 +1,13 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+<<<<<<< HEAD
+=======
+
+# For macos
+export PATH=/opt/homebrew/bin:$PATH
+
+bindkey -v
+>>>>>>> 1721fc7 (Update .zshrc)
 
 ######################## oh-my-zsh ########################
 
