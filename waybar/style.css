@@ -1,0 +1,209 @@
+
+/*
+ * __        __          _                  ____  _         _       
+ * \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___  
+ *  \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \ 
+ *   \ V  V / (_| | |_| | |_) | (_| | |     ___) | |_| |_| | |  __/ 
+ *    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    |____/ \__|\__, |_|\___| 
+ *                 |___/                              |___/         
+ *  
+ * inspired by Stephan Raabe (2023) 
+ * ----------------------------------------------------- 
+*/
+
+/* -----------------------------------------------------
+ * General 
+ * ----------------------------------------------------- */
+
+@import 'nord.css';
+
+* {
+    font-family: FiraCode Nerd Font Mono;
+    font-size: 13px;
+    border: none;
+    border-radius: 0px;
+}
+
+window#waybar {
+    background-color: rgba(0,0,0,0.2);
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+/* -----------------------------------------------------
+ * Workspaces 
+ * ----------------------------------------------------- */
+
+#workspaces {
+    background: @black;
+    color: @white;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 5px;
+    padding: 0px 1px;
+    border-radius: 15px;
+    border: 0px;
+}
+
+#workspaces button {
+    background-color: @bright-black;
+    color: @white;
+    padding: 0px 5px;
+    margin: 2px;
+    border-radius: 15px;
+    border: 0px;
+    transition: all 0.5s ease-in-out;
+}
+
+#workspaces button.active {
+    background-color: @magenta;
+    color: @black;
+    min-width: 30px;
+    transition: all 0.5s ease-in-out;
+}
+
+/* -----------------------------------------------------
+ * Tooltips
+ * ----------------------------------------------------- */
+
+tooltip {
+    border-radius: 10px;
+    background-color: @black;
+    opacity: 0.9;
+    padding: 20px;
+    margin: 0px;
+}
+
+tooltip label {
+    color: @gray-white;
+}
+
+/* -----------------------------------------------------
+ * Window
+ * ----------------------------------------------------- */
+
+#window {
+    background: @bright-black;
+    margin: 5px;
+    padding: 2px 10px 0px 10px;
+    border-radius: 12px;
+    color:@gray-white;
+    font-size:12px;
+    font-weight: normal;
+    opacity:0.8;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
+/* -----------------------------------------------------
+ * Modules
+ * ----------------------------------------------------- */
+
+#custom-exit {
+    margin: 0px 15px 0px 5px;
+    padding: 0px;
+    font-size: 24px;
+    font-weight: bold;
+    color: @black;
+}
+
+/* -----------------------------------------------------
+ * Hardware Group
+ * ----------------------------------------------------- */
+
+#disk,#cpu,#memory {
+    background-color: @black;
+    color:@white;
+    padding: 2px 5px 0px 5px;
+    margin: 5px 0px;
+}
+
+#disk {
+    border-radius: 15px 0px 0px 15px;
+    padding-left: 10px;
+    margin-left: 5px;
+}
+#memory {
+    border-radius: 0px 15px 15px 0px;
+    padding-right: 10px;
+    margin-right: 5px;
+}
+
+/* -----------------------------------------------------
+ * Connections Group
+ * ----------------------------------------------------- */
+
+#bluetooth,#network {
+    background-color: @black;
+    color: @white;
+    padding: 2px 5px 0px 5px;
+    margin: 5px 0px;
+}
+
+#bluetooth.off {
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+}
+
+#network {
+    border-radius: 15px 0px 0px 15px;
+    padding-left: 10px;
+    margin-left: 5px;
+}
+
+#bluetooth {
+    border-radius: 0px 15px 15px 0px;
+    padding-right: 10px;
+    margin-right: 5px;
+}
+
+/* -----------------------------------------------------
+ * Clock
+ * ----------------------------------------------------- */
+
+#clock {
+    background-color: @black;
+    color: @white;
+    border-radius: 15px;
+    padding: 2px 10px 0px 10px;
+    margin: 5px;
+}
+
+/* -----------------------------------------------------
+ * Other
+ * ----------------------------------------------------- */
+
+#pulseaudio,#battery,#backlight {
+    background-color: @black;
+    color: @white;
+    padding: 2px 5px 0px 5px;
+    margin: 5px 0px;
+}
+
+#pulseaudio {
+    border-radius: 15px 0px 0px 15px;
+    padding-left: 10px;
+    margin-left: 5px;
+}
+
+#backlight {
+    border-radius: 0px 15px 15px 0px;
+    padding-right: 10px;
+    margin-right: 5px;
+}
+
+/* -----------------------------------------------------
+ * Tray
+ * ----------------------------------------------------- */
+
+#tray {
+    background-color: transparent;
+}
+
+/* -----------------------------------------------------
+ * Other
+ * ----------------------------------------------------- */
+
