@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+
+from typing import List
+from pathlib import Path
+import os
+
+def create_symlink(directory: Path, config_dir: Path = (Path.home() / '.config')):
+    try:
+        symlink_path = config_dir / directory.name  # Use the name of the directory as the target filename
+        symlink_path = symlink_path.resolve()  # Resolve any relative paths
+
+        # Check if a symlink or directory already exists in .config
+        if symlink_path.exists():
+            if symlink_path.is_dir():
+                shutil.rmtree(symlink_path)
+            else:
+                os.unlink(symlink_path)
+
+        # Create symlink
+        os.symlink(directory, symlink_path)
+        print(f"Created symlink for {directory.name}")
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+if __name__ == "__main__":
+    home_dir = Path.home()
+    dotfiles_dir = home_dir / 'SfikasTeo' / 'dotfiles'
+
+    directories = [
+        (dotfiles_dir / 'helix').resolve(),
+        (dotfiles_dir / 'hypr').resolve(),
+        (dotfiles_dir / 'rofi').resolve(),
+        (dotfiles_dir / 'zsh').resolve(),
+    ]
+
+    for directory in directories:
+        create_symlink(directory)
