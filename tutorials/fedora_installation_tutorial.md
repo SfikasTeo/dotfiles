@@ -10,7 +10,7 @@ Finally fedora by default uses **[systemd](https://docs.fedoraproject.org/en-US/
 * [DNF Package Manager](https://dnf.readthedocs.io/en/latest/index.html)
 * [Fedora Packages](https://packages.fedoraproject.org/)
 
-## Server Installation -- Or a good building block = Fedora i3 spin
+## Server Installation
 The installation pocedure is graphical and easy based on the anaconda installer.  
 Points of interest:
 1. First task: Configuring the partitioning and choosing the filesystem:
@@ -24,35 +24,48 @@ It is recommended to use the [UEFI](https://www.linux-magazine.com/Online/Featur
 4. Under Software Selection, nothing is mandatory but may opt for Network Submodules, if the wanted use if a Desktop Environment.
 
 ## Creating a minimal desktop
-1. Configure **Dnf** to speed up the process and upgrade the system.
-2. Installation of [X-server](https://wiki.archlinux.org/title/Category:X_server) and Basic Packages
+1. Configure [**Dnf**](https://github.com/SfikasTeo/dotfiles/blob/main/tutorials/fedora_installation_tutorial.md) to speed up the process and upgrade the system.
+2. Installation of Basic Packages
+3. Install Basic packages
 ```
-sudo dnf group install \
-base-x \ # Xorg related packages
-standard \ # Basic Utilities
-fonts \ # Google - Liberation Fonts
-c-development \ # c/c++ development
-multimedia \ # Audio/Video framework
-```
-3. Install any Window Manager or Desktop Environment.
-Desktop environments can easily be installed through the corresponding group. In order to make a functional desktop with a Window manager some additional packages are adviced.
-```
+#!/bin/bash
+
+### Cli- Utilities
 sudo dnf install \
-xclip xrandr git xsetroot bat conky rofi feh bluez-tools \ # Utilities
-bspwm sxhkd kitty neovim zsh thunar  \ # Desktop packages
-material-icons-fonts fira-code-fonts \ # Fonts
-lm_sensors inxi btop \ # Diagnostics
-flatpak lxappearance flameshot 
+git GraphicsMagick vim btop unzip ripgrep \
+wl-clipboard brightnessctl light rofi-wayland \
+lm_sensors inxi grim slurp helix zsh curl rustup
+
+### Desktop packages
+sudo dnf install \
+wl-clipboard hyprland xdg-desktop-portal-hyprland polkit \
+pavucontrol foot thunar thunar-volman thunar-archive-plugin \
+blueman flatpak
+
+### Corps:
+# Notification Center
+dnf copr enable erikreider/SwayNotificationCenter
+dnf install SwayNotificationCenter
+# Bottom
+sudo dnf copr enable atim/bottom
+sudo dnf install bottom
+# Bibata Cursor theme
+sudo dnf copr enable peterwu/rendezvous
+sudo dnf install bibata-cursor-themes
+
 ```
 4. Configure the system.
   * Change the default shell *( Optional )* : `chsh -s $(which zsh)`
   * Update or move necessary files to `~/.config`
-  * Install a Dispaly manager:
+  * Install a Dispaly manager *( Optional )*:
 ```
 sudo dnf install lightdm
 sudo systemctl enable lightdm
 sudo systemctl set-default graphical.target
-``` 
+```
+  * Changing the keyboard-layout:
+    * Either use user-space remappers like [xremap](https://github.com/k0kubun/xremap)
+    * Change it on kernel-level: `/usr/lib/kdb..`   
 
 ## Fedora Package management and [DNF](https://docs.fedoraproject.org/en-US/quick-docs/dnf/)
 DNF is generally considered one of the **slowest** package management systems. The first time DNF is used, a relatively **big size of metadata** from every repository must be updated, giving the first truth to the statement above. After the first use and after determining the fastest mirrors, although the package management is quite faster, **compared** to other package managers like **apt** or **pacman**, dnf lacks behind in speed. Configuring DNF with the following arguments is always recommended.
