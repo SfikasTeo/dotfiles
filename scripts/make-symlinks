@@ -18,30 +18,31 @@ def create_symlink(directory: Path, config_dir: Path = Path.home() / '.config'):
 
 def main():
     parser = argparse.ArgumentParser(description="Create symlinks for dotfiles.")
-    parser.add_argument("-dir", nargs="?", help="Specify a directory to create symlinks for.")
+    parser.add_argument("directories", nargs="*", help="Specify directories to create symlinks for.")
 
     args = parser.parse_args()
 
     home_dir = Path.home()
     dotfiles_dir = home_dir / 'SfikasTeo' / 'dotfiles'
 
-    if args.repository:
-        repository_path = (dotfiles_dir / args.repository).resolve()
-        if repository_path.exists():
-            create_symlink(repository_path)
-        else:
-            print(f"Repository '{args.repository}' does not exist.")
+    if args.directories:
+        for directory_name in args.directories:
+            directory_path = (dotfiles_dir / directory_name).resolve()
+            if directory_path.exists():
+                create_symlink(directory_path)
+            else:
+                print(f"Directory '{directory_name}' does not exist.")
     else:
         directories = [
-            (dotfiles_dir / 'helix').resolve(),
-            (dotfiles_dir / 'hypr').resolve(),
-            (dotfiles_dir / 'rofi').resolve(),
-            (dotfiles_dir / 'zsh').resolve(),
-            (dotfiles_dir / 'colors').resolve(),
-        ]
+                    (dotfiles_dir / 'helix').resolve(),
+                    (dotfiles_dir / 'hypr').resolve(),
+                    (dotfiles_dir / 'rofi').resolve(),
+                    (dotfiles_dir / 'zsh').resolve(),
+                ]
 
         for directory in directories:
             create_symlink(directory)
 
 if __name__ == "__main__":
     main()
+
