@@ -26,7 +26,6 @@ It is recommended to use the [UEFI](https://www.linux-magazine.com/Online/Featur
 ## Creating a minimal desktop
 1. Configure [**Dnf**](https://github.com/SfikasTeo/dotfiles/blob/main/tutorials/fedora_installation_tutorial.md#fedora-package-management-and-dnf) to speed up the process and upgrade the system.
 2. Installation of Basic Packages
-3. Install Basic packages
 ```
 #!/bin/bash
 
