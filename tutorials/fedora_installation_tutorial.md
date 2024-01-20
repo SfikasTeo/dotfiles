@@ -78,6 +78,7 @@ metadata_expire=-1
 * Reevaluating repositories metadata for faster mirrors may be advised: `dnf clean metadata`
 * Most commonly used commands: 
     * `dnf info <package>` Display information about installed packages
+    * `dnf check-update` Update package cache
     * `dnf search <package>` Search repositories for specific package
     * `dnf install <package>` Install specific package from a repository
     * `dnf remove <package>` Remove a specific package and its dependencies
