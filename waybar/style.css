@@ -15,7 +15,7 @@
  * General 
  * ----------------------------------------------------- */
 
-@import 'nord.css';
+@import 'theme.css';
 
 * {
     font-family: FiraCode Nerd Font Mono;
@@ -35,8 +35,8 @@ window#waybar {
  * ----------------------------------------------------- */
 
 #workspaces {
-    background: @black;
-    color: @white;
+    background: @black00;
+    color: @white01;
     font-size: 15px;
     font-weight: bold;
     margin: 5px;
@@ -46,8 +46,8 @@ window#waybar {
 }
 
 #workspaces button {
-    background-color: @bright-black;
-    color: @white;
+    background-color: @black01;
+    color: @white01;
     padding: 0px 5px;
     margin: 2px;
     border-radius: 15px;
@@ -56,8 +56,8 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background-color: @magenta;
-    color: @black;
+    background-color: @purple01;
+    color: @black00;
     min-width: 30px;
     transition: all 0.5s ease-in-out;
 }
@@ -68,14 +68,14 @@ window#waybar {
 
 tooltip {
     border-radius: 10px;
-    background-color: @black;
+    background-color: @black00;
     opacity: 0.9;
     padding: 20px;
     margin: 0px;
 }
 
 tooltip label {
-    color: @gray-white;
+    color: @white02;
 }
 
 /* -----------------------------------------------------
@@ -83,14 +83,14 @@ tooltip label {
  * ----------------------------------------------------- */
 
 #window {
-    background: @bright-black;
+    background: @black01;
     margin: 5px;
     padding: 2px 10px 0px 10px;
     border-radius: 12px;
-    color:@gray-white;
-    font-size:12px;
+    color: @white02;
+    font-size: 12px;
     font-weight: normal;
-    opacity:0.8;
+    opacity: 0.8;
 }
 
 window#waybar.empty #window {
@@ -106,7 +106,7 @@ window#waybar.empty #window {
     padding: 0px;
     font-size: 24px;
     font-weight: bold;
-    color: @black;
+    color: @purple01;
 }
 
 /* -----------------------------------------------------
@@ -114,8 +114,8 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #disk,#cpu,#memory {
-    background-color: @black;
-    color:@white;
+    background-color: @black01;
+    color: @white01;
     padding: 2px 5px 0px 5px;
     margin: 5px 0px;
 }
@@ -136,8 +136,8 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #bluetooth,#network {
-    background-color: @black;
-    color: @white;
+    background-color: @black01;
+    color: @white01;
     padding: 2px 5px 0px 5px;
     margin: 5px 0px;
 }
@@ -165,8 +165,8 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #clock {
-    background-color: @black;
-    color: @white;
+    background-color: @black01;
+    color: @white01;
     border-radius: 15px;
     padding: 2px 10px 0px 10px;
     margin: 5px;
@@ -177,8 +177,8 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #pulseaudio,#battery,#backlight {
-    background-color: @black;
-    color: @white;
+    background-color: @black01;
+    color: @white01;
     padding: 2px 5px 0px 5px;
     margin: 5px 0px;
 }

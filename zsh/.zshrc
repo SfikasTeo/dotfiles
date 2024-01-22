@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
 
-bindkey -v
+bindkey -e
 
 ######################## oh-my-zsh ########################
 
@@ -45,9 +45,9 @@ fi
 alias egrep='grep -E --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
 alias fgrep='grep -F --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
-alias ls='ls -G'
-alias la='ls -lah'
-alias ll='ls -lh'
+# alias ls='ls -G'
+# alias la='ls -lah'
+# alias ll='ls -lh'
 alias md='mkdir -p'
 alias rd=rmdir
 alias sst="sudo systemctl"

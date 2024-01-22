@@ -6,7 +6,7 @@
 #  |_| |_|\___|_|_/_/\_\
 #
 
-theme = "onedark_nord"
+theme = "custom"
 
 [editor]
 line-number = "relative"
