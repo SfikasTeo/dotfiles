@@ -37,9 +37,9 @@ lm_sensors inxi grim slurp helix zsh curl rustup
 
 ### Desktop packages
 sudo dnf install \
-wl-clipboard hyprland xdg-desktop-portal-hyprland polkit \
+wl-clipboard hyprland xdg-desktop-portal-hyprland \
 pavucontrol foot thunar thunar-volman thunar-archive-plugin \
-blueman flatpak swaybg
+blueman flatpak swaybg polkit-gnome
 
 ### Corps:
 # Notification Center
