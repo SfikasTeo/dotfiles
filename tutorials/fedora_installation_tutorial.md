@@ -31,7 +31,7 @@ It is recommended to use the [UEFI](https://www.linux-magazine.com/Online/Featur
 
 ### Cli- Utilities
 sudo dnf install \
-git GraphicsMagick vim btop unzip ripgrep \
+git GraphicsMagick vim btop unzip ripgrep fzf \
 wl-clipboard brightnessctl light rofi-wayland \
 lm_sensors inxi grim slurp helix zsh curl rustup
 
@@ -39,7 +39,7 @@ lm_sensors inxi grim slurp helix zsh curl rustup
 sudo dnf install \
 wl-clipboard hyprland xdg-desktop-portal-hyprland polkit \
 pavucontrol foot thunar thunar-volman thunar-archive-plugin \
-blueman flatpak
+blueman flatpak swaybg
 
 ### Corps:
 # Notification Center
