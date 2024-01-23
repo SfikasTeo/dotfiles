@@ -113,7 +113,7 @@ Several offline media players *like vlc or mpv* bundle all the relevant codecs b
 ```
 sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
 sudo dnf install lame\* --exclude=lame-devel
-sudo dnf group upgrade --with-optional Multimedia
+sudo dnf group upgrade --with-optional Multimedia --allowerasing
  ```
  
 ## Install [Visual-Studio-Code](https://code.visualstudio.com/docs/setup/linux)
