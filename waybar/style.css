@@ -56,7 +56,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background-color: @purple01;
+    background-color: @cyan01;
     color: @black00;
     min-width: 30px;
     transition: all 0.5s ease-in-out;
@@ -106,7 +106,7 @@ window#waybar.empty #window {
     padding: 0px;
     font-size: 24px;
     font-weight: bold;
-    color: @purple01;
+    color: @cyan01;
 }
 
 /* -----------------------------------------------------

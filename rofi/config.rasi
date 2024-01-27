@@ -20,7 +20,7 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import                          "shared/nord.rasi"
+@import                          "shared/theme.rasi"
 
 * {
     border-colour:               var(selected);

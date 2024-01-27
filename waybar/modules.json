@@ -47,6 +47,7 @@
         "interval": 30,
         "device": "intel_backlight",
         "format": "<span size='90%'>{icon}</span> {percent}%",
+        "tooltip": false,
         "format-icons": ["󰌶", "󱠃", "󰌵"]    
     },
 
@@ -68,9 +69,9 @@
                     "format": {
                               "months":     "<span color='#a8afbd'><b>{}</b></span>",
                               "days":       "<span color='#a8afbd'><b>{}</b></span>",
-                              "weeks":      "<span color='#b48ead'><b>W{}</b></span>",
-                              "weekdays":   "<span color='#b48ead'><b>{}</b></span>",
-                              "today":      "<span color='#b48ead'><b><u>{}</u></b></span>"
+                              "weeks":      "<span color='#88c0d0'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#88c0d0'><b>{}</b></span>",
+                              "today":      "<span color='#88c0d0'><b><u>{}</u></b></span>"
                               }
                     },
         "actions":  {
@@ -119,7 +120,7 @@
     // Pulseaudio
     "pulseaudio": {
         "format": "<span size='120%'>{icon}</span> {volume}%",
-        "format-muted": "󰝟 {format_source}",
+        "format-muted": "󰝟",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
@@ -135,6 +136,6 @@
         "format-off": "",
         "tooltip-format": "{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}: {device_address}",
-        "on-click": "kitty -e bluetuith"
+        "on-click": "foot -e blueman"
     }    
 }
