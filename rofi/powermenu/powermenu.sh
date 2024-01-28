@@ -6,9 +6,9 @@
 #
 ## Rofi   : Power Menu
 
-home_dir="$HOME/.config/rofi/"
+home_dir="$HOME/.config/rofi"
 dir="$HOME/.config/rofi/powermenu"
-config='config_menu'
+config='config'
 
 # CMDs
 # uptime="`uptime | sed -e 's/up //g'`"
