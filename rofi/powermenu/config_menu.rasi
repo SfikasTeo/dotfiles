@@ -15,7 +15,8 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import                          "shared/nord.rasi"
+@import                          "shared/theme.rasi"
+@import                          "shared/fonts.rasi"
 
 /*
 USE_BUTTONS=YES
@@ -28,27 +29,27 @@ window {
     location:                    east;
     anchor:                      east;
     fullscreen:                  false;
-    width:                       65px;
-    x-offset:                    -20px;
+    width:                       70px;
+    x-offset:                    -30px;
     y-offset:                    0px;
 
     /* properties for all widgets */
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      0px solid;
-    border-radius:               0px;
+    border:                      2px solid;
+    border-radius:               30px;
     border-color:                @selected;
     cursor:                      "default";
-    background-color:            transparent;
+    background-color:            @background;
 }
 
 /*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
-    spacing:                     10px;
+    spacing:                     20px;
     margin:                      0px;
-    padding:                     0px;
+    padding:                     5px;
     border:                      0px solid;
     border-radius:               0px;
     border-color:                @selected;

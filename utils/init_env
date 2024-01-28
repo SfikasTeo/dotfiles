@@ -9,5 +9,7 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$ZDOTDIR/.zsh_history"
 export EDITOR="hx"
 
+export TMUX_CONF="$XDG_CONFIG_GOME/tmux/tmux.conf"
+
 export GDK_BACKEND="wayland"
 export MOZ_ENABLE_WAYLAND="1"
