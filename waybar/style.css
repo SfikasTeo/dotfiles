@@ -25,7 +25,7 @@
 }
 
 window#waybar {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.3);
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -79,13 +79,13 @@ tooltip label {
 }
 
 /* -----------------------------------------------------
- * Window
+ * Window & Tray
  * ----------------------------------------------------- */
 
-#window {
+#window,#tray {
     background: @black01;
     margin: 5px;
-    padding: 2px 10px 0px 10px;
+    padding: 2px 15px 0px;
     border-radius: 12px;
     color: @white02;
     font-size: 12px;
@@ -96,6 +96,8 @@ tooltip label {
 window#waybar.empty #window {
     background-color: transparent;
 }
+
+
 
 /* -----------------------------------------------------
  * Modules
@@ -116,18 +118,18 @@ window#waybar.empty #window {
 #disk,#cpu,#memory {
     background-color: @black01;
     color: @white01;
-    padding: 2px 5px 0px 5px;
+    padding: 2px 6px 0px;
     margin: 5px 0px;
 }
 
 #disk {
     border-radius: 15px 0px 0px 15px;
-    padding-left: 10px;
+    padding-left: 18px;
     margin-left: 5px;
 }
 #memory {
     border-radius: 0px 15px 15px 0px;
-    padding-right: 10px;
+    padding-right: 18px;
     margin-right: 5px;
 }
 
@@ -138,7 +140,7 @@ window#waybar.empty #window {
 #bluetooth,#network {
     background-color: @black01;
     color: @white01;
-    padding: 2px 5px 0px 5px;
+    padding: 2px 6px 0px;
     margin: 5px 0px;
 }
 
@@ -150,13 +152,13 @@ window#waybar.empty #window {
 
 #network {
     border-radius: 15px 0px 0px 15px;
-    padding-left: 10px;
+    padding-left: 18px;
     margin-left: 5px;
 }
 
 #bluetooth {
     border-radius: 0px 15px 15px 0px;
-    padding-right: 10px;
+    padding-right: 18px;
     margin-right: 5px;
 }
 
@@ -168,7 +170,7 @@ window#waybar.empty #window {
     background-color: @black01;
     color: @white01;
     border-radius: 15px;
-    padding: 2px 10px 0px 10px;
+    padding: 2px 18px 0px;
     margin: 5px;
 }
 
@@ -179,28 +181,20 @@ window#waybar.empty #window {
 #pulseaudio,#battery,#backlight {
     background-color: @black01;
     color: @white01;
-    padding: 2px 5px 0px 5px;
+    padding: 2px 6px 0px;
     margin: 5px 0px;
 }
 
 #pulseaudio {
     border-radius: 15px 0px 0px 15px;
-    padding-left: 10px;
+    padding-left: 18px;
     margin-left: 5px;
 }
 
 #backlight {
     border-radius: 0px 15px 15px 0px;
-    padding-right: 10px;
+    padding-right: 18px;
     margin-right: 5px;
-}
-
-/* -----------------------------------------------------
- * Tray
- * ----------------------------------------------------- */
-
-#tray {
-    background-color: transparent;
 }
 
 /* -----------------------------------------------------

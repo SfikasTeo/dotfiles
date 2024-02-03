@@ -39,12 +39,12 @@
 
     // Modules Right    
     "modules-right": [
+        "tray",
         "group/hardware",
         "pulseaudio",
         "battery", 
 		"backlight",
 		"custom/exit",
-		"tray"
     ],
 
     // Group Hardware
