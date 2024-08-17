@@ -1,70 +1,102 @@
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/opt/homebrew/bin:$PATH
+######################## Path ########################
 
-bindkey -e
+PATH="/$HOME/.local/bin:$PATH"
 
-######################## oh-my-zsh ########################
+# Add Homebrew (if you are on macOS)
+if [[ "$(uname -s)" == "Darwin" ]]; then
+    PATH="/opt/homebrew/bin:$PATH"
+    PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+fi
 
-# Path to your oh-my-zsh installation.
+# Add Nix to the PATH (if it's installed)
+if [[ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]]; then
+    . "$HOME/.nix-profile/etc/profile.d/nix.sh"
+fi
+
+# Add Emacs to the PATH (if it's installed)
+if [[ -e "$HOME/.emacs.d/bin" ]]; then
+    PATH="$HOME/.emacs.d/bin":$PATH
+fi
+
+# Add .cargo/bin to the PATH (if it's installed)
+if [[ -e "$HOME/.cargo/bin" ]]; then
+    PATH="$HOME/.cargo/bin":$PATH
+fi
+
+export PATH
+
+######################## OMZsh ########################
+
 export ZSH="$HOME/.oh-my-zsh"
-# export ZSH_CUSTOM="$ZSH/custom"
+ZSH_THEME=""
+CASE_SENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
+DISABLE_MAGIC_FUNCTIONS="true"
+DISABLE_LS_COLORS="true"
+DISABLE_AUTO_TITLE="true"
+ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+HIST_STAMP="yyyy-mm-dd"
 
-# ZSH Theming
-ZSH_THEME="refined"
-
-# ZSH Updating protocol
-zstyle ':omz:update' mode reminder # Remind 
-zstyle ':omz:update' frequency 14 # Two Weeks
-
-# Uncomment the following line if you want to change the command execution time
-HIST_STAMPS="yyyy-mm-dd"
-
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
-	# zsh-autosuggestions # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-	# zsh-syntax-highlighting # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-	# git 
+    git
+    zsh-autosuggestions
+    zsh-syntax-highlighting
 )
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#bbc3d4'
+
+zstyle ':omz:update' mode reminder
+zstyle ':omz:update' frequency 7
 
 source $ZSH/oh-my-zsh.sh
 
-######################## User Config ########################
+######################## Config ########################
 
-# Exported Environmental Variables:
+# ZSH configuration
+bindkey -e
 export LANG=en_US.UTF-8
+unsetopt correct_all
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='hx'
-fi
-
-alias egrep='grep -E --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
-alias fgrep='grep -F --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
-alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
-# alias ls='ls -G'
-# alias la='ls -lah'
-# alias ll='ls -lh'
+# Basic aliases
+alias nv=nvim
+alias egrep='grep -E --color=auto --exclude-dir={.git}'
+alias fgrep='grep -F --color=auto --exclude-dir={git}'
+alias grep='grep --color=auto --exclude-dir={.git}'
+alias cdr='cd $(git rev-parse --show-toplevel)'
+alias sc='sudo systemctl'
+alias jc='sudo journalctl'
 alias md='mkdir -p'
 alias rd=rmdir
-alias sst="sudo systemctl"
 
-####################### User Functions #######################
+# lsd
+if [[ -x "$(command -v lsd)" ]]; then
+    alias ls='lsd -a'
+    alias la='lsd -la'
+    alias lt='lsd --tree'
+fi
 
-# Helix Search
-hxs() {
-	RG_PREFIX="rg -i --files-with-matches"
-	local files
-	files="$(
-		FZF_DEFAULT_COMMAND_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
-			fzf --multi 3 --print0 --sort --preview="[[ ! -z {} ]] && rg --pretty --ignore-case --context 5 {q} {}" \
-				--phony -i -q "$1" \
-				--bind "change:reload:$RG_PREFIX {q}" \
-				--preview-window="70%:wrap" \
-				--bind 'ctrl-a:select-all'
-	)"
-	[[ "$files" ]] && hx --vsplit $(echo $files | tr \\0 " ")
-}
+# fzf -- dependancy: ripgrep, fd-find
+if [[ -x "$(command -v fzf)" ]]; then
+    export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore --glob "!.git/*"'
+    export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+    export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+    export FZF_ALT_C_COMMAND="fd --type d"
+    export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap"
+    source <(fzf --zsh)
+fi
+
+# startship
+if [[ -x "$(command -v starship)" ]]; then
+    eval "$(starship init zsh)"
+fi
+
+# direnv
+if [[ -x "$(command -v direnv)" ]]; then
+    eval "$(direnv hook zsh)"
+fi
+
+# source worldcoin dev env:
+source $HOME/.wldrc
+
